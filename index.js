@@ -23,6 +23,8 @@ app.get("/rolldice", (req, res) => {
 });
 
 app.get("/ig/:username", (req, res) => {
+  console.log("instagram page active");
+  const followers = ["bob", "steve", "abs"];
   let { username } = req.params;
-  res.render("instagram.ejs", { username });
+  res.render("instagram.ejs", { username, followers });
 });

@@ -24,7 +24,16 @@
             <p>Comments</p>
             <p>Share</p>
         </div>
-
+        <div>
+            <h3>Account that follow you :</h3>
+            <ul>
+                <% for (let name of followers){ %>
+                    <li>
+                        <%=name%>
+                    </li>
+                    <%} %>
+            </ul>
+        </div>
     </div>
 </body>
 

@@ -1,4 +1,3 @@
-const { log } = require("console");
 const express = require("express");
 const app = express();
 const port = 8000;
@@ -27,6 +26,9 @@ app.get("/ig/:username", (req, res) => {
   let { username } = req.params;
   const instaData = require("./data.json");
   const data = instaData[username];
-  console.log(data)
-  res.render("instagram.ejs", { data });
+  if (data) {
+    res.render("instagram.ejs", { data });
+  } else {
+    res.render("error.ejs");
+  }
 });

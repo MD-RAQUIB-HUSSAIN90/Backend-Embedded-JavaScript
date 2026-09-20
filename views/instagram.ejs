@@ -11,29 +11,24 @@
     <h1>This is instagram page </h1>
     <div>
         <h3> Username :
-            @<%= username %>
-
+            @<%= data.name %>
         </h3>
-        <div class="buttons">
-            <button>Follow</button>
-            <button>Unfollow</button>
-            <button>Massege</button>
-        </div>
-        <div style="display: flex; justify-content: space-between;width: 30%;">
-            <p>Likes </p>
-            <p>Comments</p>
-            <p>Share</p>
-        </div>
-        <div>
-            <h3>Account that follow you :</h3>
-            <ul>
-                <% for (let name of followers){ %>
-                    <li>
-                        <%=name%>
-                    </li>
-                    <%} %>
-            </ul>
-        </div>
+        <p>Followers:- <%= data.followers%>
+        </p>
+        <p>Following:- <%= data.following%>
+        </p>
+
+        <hr>
+
+
+        <% for (let post of data.posts) {%>
+            <img src="post.image" alt="some image">
+
+            <p>Likes:- <% post.likes%>
+            </p>
+            <p>comment:- <% post.comments%>
+            </p>
+            <%}%>
     </div>
 </body>
 

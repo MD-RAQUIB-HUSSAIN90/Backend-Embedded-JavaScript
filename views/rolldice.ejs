@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("includes/head.ejs")%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rolldice</title>
-</head>
+    <body>
+        <h1>Your dice gave value: <%= diceVal %>
+        </h1>
 
-<body>
-    <h1>Your dice gave value: <%= diceVal %>
-    </h1>
+        <% if (diceVal==6) {%>
+            <h2>Nice! Roll dice again.</h2>
+            <%}%>
 
-    <% if (diceVal==6) {%>
-        <h2>Nice! Roll dice again.</h2>
-        <%}%>
+                <%- include("footer/footer.ejs")%>
+    </body>
 
-
-</body>
-
-</html>
+    </html>
